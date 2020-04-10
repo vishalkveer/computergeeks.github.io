@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Computer Geeks</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #b71c1c;
+  color: white;
+}
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Computer Geeks</h1>
+  <p>A <b>Website</b> for coding practice</p>
+</div>
+
+<div class="navbar">
+  <a href="index.html" class="active">Home</a>
+  <a href="practice.html">Practice</a>
+  <a href="codelibrary.html">Code Library</a>
+  <a href="contact.html" class="right">Contact</a>
+  <a href="login.html" class="right">Login</a>
+</div>
+
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h1>Code Library</h1>
+      <h2>Hello World Program</h2>
+ <p>#include <stdio.h><br><br>
+
+int main()<br>
+{<br>
+    printf("\n\n\t\tStudytonight - Best place to learn\n\n\n");<br><br>
+    int num;<br><br>
+    printf("\nHello world!\n\n");<br><br>
+    printf("\n\n\t\t\tCoding is Fun !\n\n\n");<br><br>
+    return 0;<br>
+} </p>
+<h3>Output</h3>
+<p>
+Hello World!<br><br>
+Coding is Fun !<br>
+</p>
+
+<h2>Program to find average of N Numbers</h2>
+<p>
+#include<stdio.h><br><br>
+
+int main()<br>
+{
+
+    int n, i;<br>
+    float sum = 0, x;<br><br>
+
+    printf("Enter number of elements:  ");<br>
+    scanf("%d", &n);<br>
+    printf("\n\n\nEnter %d elements\n\n", n);<br>
+    for(i = 0; i < n; i++)<br>
+    {<br>
+        scanf("%f", &x);<br>
+        sum += x;<br>
+    }<br>
+    printf("\n\n\nAverage of the entered numbers is =  %f", (sum/n));<br>
+    return 0;<br>
+}
+<h3>Output</h3>
+Enter number of elements : 5<br><br>
+Enter 5 elements<br>
+3<br>
+5<br>
+6<br>
+7<br>
+2<br>
+</p>
+<h2>Program to find Sum of N input Numbers in C</h2>
+<p>
+#include<stdio.h><br><br>
+
+int main()<br>
+{
+    int n,sum=0,c,value;<br><br>
+
+    printf("\n\nEnter the number of integers you want to add:  ");<br>
+    scanf("%d", &n);<br><br>
+
+    printf("Enter %d integers\n\n",n);<br>
+    for(c = 1; c <= n; c++)<br>
+    {
+        scanf("%d", &value);<br>
+        sum += value;<br>
+    }
+
+    printf("\n\n\nsum of entered numbers  = %d", sum);<br>
+    return 0;
+}
+<h3>Output</h3>
+Enter the number of integers you want to add : 5<br>
+Enter 5 integers<br>
+5<br>
+6<br>
+2<br>
+4<br>
+1<br>
+</p>
+<h2>Checking for Odd and Even Numbers using Bitwise Operator</h2>
+<p>
+#include<stdio.h><br>
+
+int main()<br>
+{
+    int x;<br>
+    for(x = 0; x <= 10; x++)<br>
+    {
+        if(x&1) // if number is odd<br><br>
+            printf("\t\t\t%d is odd\n",x);<br><br>
+        else if(!(x&1)) // ! is used inside if to reverse the boolean value<br><br>
+            printf("\t\t\t%d is even\n",x);<br><br>
+    }
+    return 0;<br>
+}
+<h3>Output</h3>
+0 is even<br>
+1 is odd <br>
+2 is even<br>
+3 is odd<br>
+4 is even<br>
+5 is odd <br>
+6 is even <br>
+7 is odd <br>
+8 is even <br>
+9 is odd <br>
+10 is even <br>
+</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Top Rated Problems</h2>
+     <a href="practice.html">Program to find Sum of N input Numbers in C</a><br><br>
+      <a href="practice.html">Program to find average of N Numbers</a><br><br>
+      <a href="practice.html">Checking for Odd and Even Numbers using Bitwise Operator</a><br><br>
+
+
+    </div>
+    <div class="card">
+      <h2>Top Used Language</h2>
+      <a href="c.html">C Language</a><br><br>
+      <a href="cplus.html">C++ Language</a><br><br>
+       <a href="python.html">Python</a>
+
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>© Copyright 2020 Computer Geeks.</h2>
+</div>
+
+</body>
+</html>

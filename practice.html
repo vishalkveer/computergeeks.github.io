@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Computer Geeks</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #b71c1c;
+  color: white;
+}
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Computer Geeks</h1>
+  <p>A <b>Website</b> for coding practice</p>
+</div>
+
+<div class="navbar">
+  <a href="index.html" class="active">Home</a>
+  <a href="practice.html">Practice</a>
+  <a href="codelibrary.html">Code Library</a>
+  <a href="contact.html" class="right">Contact</a>
+  <a href="login.html" class="right">Login</a>
+</div>
+
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>PROBLEM 1</h2>
+      <p>Write a C program to print Hello World!</p>
+                  <a href="#" target="_blank">Click me to see more</a>
+    </div>
+    <div class="card">
+      <h2>PROBLEM 2</h2>
+      <p>Program to find average of N Numbers</p>
+            <a href="#" target="_blank">Click me to see more</a>
+
+    </div>
+     <div class="card">
+      <h2>PROBLEM 3</h2>
+      <p>Program to find Sum of N input Numbers in C</p>
+                  <a href="#" target="_blank">Click me to see more</a>
+
+    </div>
+     <div class="card">
+      <h2>PROBLEM 4</h2>
+      <p>Write a C program to get the absolute difference between n and 51. If n is greater than 51 return triple the absolute difference.</p>
+            <a href="#" target="_blank">Click me to see more</a>
+
+    </div>
+     <div class="card">
+      <h2>PROBLEM 5</h2>
+      <p>Program to find first N Prime Numbers</p>
+            <a href="#" target="_blank">Click me to see more</a>
+
+    </div>
+     <div class="card">
+      <h2>PROBLEM 6</h2>
+      <p>Program to print the Multiplication Table of any Number</p>
+            <a href="#" target="_blank">Click me to see more</a>
+
+    </div>
+    <div class="card">
+      <h2>PROBLEM 7</h2>
+      <p>Checking for Odd and Even Numbers using Bitwise Operator</p>
+            <a href="#" target="_blank">Click me to see more</a>
+
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Top Rated Problems</h2>
+      <a href="practice.html">Program to find Sum of N input Numbers in C</a><br><br>
+      <a href="practice.html">Program to find average of N Numbers</a><br><br>
+      <a href="practice.html">Checking for Odd and Even Numbers using Bitwise Operator</a><br><br>
+
+
+    </div>
+    <div class="card">
+      <h2>Top Used Language</h2>
+      <a href="c.html">C Language</a><br><br>
+      <a href="cplus.html">C++ Language</a><br><br>
+       <a href="python.html">Python</a>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>© Copyright 2020 Computer Geeks.</h2>
+</div>
+
+</body>
+</html>
